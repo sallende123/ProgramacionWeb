@@ -1,3 +1,4 @@
+/* cambio la fuente y pongo la que descargue de google font*/
 *{
     margin: 0;
     padding: 0;
@@ -40,4 +41,17 @@ nav img{
     color: rgb(247, 14, 14);
     text-decoration: none;
     font-size: 13px;
+}
+/* creo linea que va aparecer en los links del menu cuando paso el mouse*/
+.nav-links ul li::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
 }
