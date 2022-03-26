@@ -55,7 +55,8 @@ nav img{
 /* lo agrego para que aparesca la linea cuando paso el mouse*/
 .nav-links ul li:hover::after{
     width: 100%;
-}text-box{
+}
+.text-box{
     width: 90%;
     color: rgb(10, 1, 1);
     position: absolute;
