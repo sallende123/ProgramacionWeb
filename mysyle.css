@@ -91,7 +91,7 @@ nav img{
 }
 /*para que haga efecto cuando paso mouse por boton*/
 .hero-btn:hover{
-    border: 1px solid #f44336;
-    background: #f44336;
+    border: 1px solid #646161;
+    background: #646161;
     transition: 1s;
 }
