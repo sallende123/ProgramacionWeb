@@ -160,7 +160,7 @@ p{
 .posiciones-col{
     flex-basis: 25%;
     background: #fff3f3;
-    border-radius: 10px;
+    border-radius: 1px;
     margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
