@@ -6,27 +6,21 @@
     background-size: cover;
     position: relative;
 }
+/* Ubico el logo, lo separe del margen. Le asigne espacio de arriba, izquierda y derecha. Lo alinee*/
 nav{
     display: flex;
     padding: 2% 6%;
     justify-content: space-between;
     align-items: center;
 }
+/* tamanio del logo*/
 nav img{
     width: 150px;
   }
+/* Que los links ocupen toda la fila y para que esten a la derecha*/
 .nav-links{
     flex: 1;
     text-align: right;
   }
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-.nav-links ul li a{
-    color: rgb(247, 14, 14);
-    text-decoration: none;
-    font-size: 13px;
-}
+
+
