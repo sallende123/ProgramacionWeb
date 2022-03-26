@@ -52,6 +52,7 @@ nav img{
     margin: auto;
     transition: 0.5s;
 }
+/* lo agrego para que aparesca la linea cuando paso el mouse*/
 .nav-links ul li:hover::after{
     width: 100%;
 }
