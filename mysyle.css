@@ -95,3 +95,22 @@ nav img{
     background: rgb(10, 1, 1);
     transition: 1s;
 }
+/*ajusto texto de titulo para que se vea bien en celu y creo menu con los links que se abre desde costado en celu */
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display:block;
+    }
+    .nav-links{
+        position:absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+
+    }
