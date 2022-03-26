@@ -131,9 +131,22 @@ nav .fa{
     }
 }
 /* seccion equipo */
+/*el titulo y texto de la nueva seccion, donde lo ubico y como*/
 .Equipo{
     width: 80%;
     margin: auto;
     text-align:center;
     padding-top: 100px;
+}
+/*la fuente del texto, su color y caracteristicas*/
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color:rgb(10, 1, 1);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 0;
 }
