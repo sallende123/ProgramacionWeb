@@ -130,3 +130,10 @@ nav .fa{
         padding: 30px;
     }
 }
+/* seccion equipo */
+.Equipo{
+    width: 80%;
+    margin: auto;
+    text-align:center;
+    padding-top: 100px;
+}
