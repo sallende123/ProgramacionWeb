@@ -150,3 +150,9 @@ p{
     line-height: 22px;
     padding: 0;
 }
+/*hago que las columnas de equipo esten una al lado de otra*/
+.row{
+    margin-top: 5%;
+    display:flex;
+    justify-content: space-between;
+}
