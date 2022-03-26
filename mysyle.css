@@ -199,7 +199,7 @@ h3{
     margin-bottom: 30px;
     position:relative;
     overflow: hidden;
-
+/*para que cuando paso el mouse por la imagen se ponga roja*/
 }
 .stats-col img{
     width: 100%;    
@@ -215,4 +215,7 @@ h3{
 }
 .layer:hover{
     background: rgba(226,0,0,0.7);
+}
+.stats h1{
+    color: #fff3f3;
 }
