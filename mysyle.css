@@ -216,6 +216,15 @@ h3{
 .layer:hover{
     background: rgba(226,0,0,0.7);
 }
-.stats h3{
-    color: #fff3f3;
+/*cambie el color y caracteristicas del texto en las imagenes*/ 
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color:#fff;
+    font-size: 26px;
+    bottom: 0;
+    left:50%;
+    transform: translateX(-50%);
+    position: absolute;
+
 }
