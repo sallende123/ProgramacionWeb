@@ -56,6 +56,7 @@ nav img{
 .nav-links ul li:hover::after{
     width: 100%;
 }
+/* pongo el texto en el medio de la pagina*/
 .text-box{
     width: 90%;
     color: rgb(10, 1, 1);
@@ -64,4 +65,15 @@ nav img{
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
+}
+/* cambio tamanio del titulo*/
+.text-box h1{
+    font-size: 62px;
+
+}
+/*cambio tamanio del texto y margen*/
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: rgb(10, 1, 1) 
 }
