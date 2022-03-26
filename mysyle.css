@@ -116,5 +116,13 @@ nav .fa{
         right: 0;
         text-align: left;
         z-index: 2;
-
     }
+    /*hago visibles los iconos para movil*/
+    nav .fa{
+        display: block;
+        color: #f44336;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+}
