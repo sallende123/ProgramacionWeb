@@ -216,6 +216,6 @@ h3{
 .layer:hover{
     background: rgba(226,0,0,0.7);
 }
-.stats h1{
+.stats p{
     color: #fff3f3;
 }
