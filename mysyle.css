@@ -95,6 +95,10 @@ nav img{
     background: rgb(10, 1, 1);
     transition: 1s;
 }
+/*para que solo se vean los iconos en el movil*/
+nav .fa{
+    display: none;
+}
 /*ajusto texto de titulo para que se vea bien en celu y creo menu con los links que se abre desde costado en celu */
 @media(max-width: 700px){
     .text-box h1{
