@@ -158,7 +158,7 @@ p{
 }
 /*cada posicion tiene un fondito*/
 .posiciones-col{
-    flex-basis: 20%;
+    flex-basis: 23%;
     background: #fff3f3;
     border-radius: 10px;
     margin-bottom: 5%;
