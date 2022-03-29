@@ -10,7 +10,7 @@
     background-image:   linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(C:\Users\Santi\Desktop\imagehttps://scontent.faep9-3.fna.fbcdn.net/v/t39.30808-6/277304929_2158997604275540_9054707038736590885_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=730e14&_nc_ohc=MgtJo8by1RcAX8Gesd0&_nc_ht=scontent.faep9-3.fna&oh=00_AT-xYz9dxhDF6MTGtiG4sZwkYo8IIaZi633zgqdCih7qFw&oe=62439998nes));
     background-position: center;
     background-size: cover;
-    position: sticky;
+    position: relative;
 }
 /* Ubico el logo, lo separe del margen. Le asigne espacio de arriba, izquierda y derecha. Lo alinee*/
 nav{
