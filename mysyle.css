@@ -27,6 +27,7 @@ nav img{
 .nav-links{
     flex: 1;
     text-align: right;
+    position: sticky;
   }
 /* para que los links se pongan en fila y sacar los puntitos */
 .nav-links ul li{
@@ -57,7 +58,7 @@ nav img{
 .nav-links ul li:hover::after{
     width: 100%;
 }
-/* pongo el texto en el medio de la pagina*/
+/* pongo el texto y bloque en el medio de la pagina*/
 .text-box{
     width: 90%;
     color: rgb(10, 1, 1);
