@@ -63,7 +63,7 @@ nav img{
     color: rgb(10, 1, 1);
     position: absolute;
     top: 50%;
-    left: 20%;
+    left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
 }
