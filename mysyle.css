@@ -245,3 +245,7 @@ h3{
     opacity: 1;
 
 }
+footer{
+    position: fixed;
+    bottom: 0px;
+}
