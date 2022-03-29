@@ -249,3 +249,6 @@ footer{
     position: fixed;
     bottom: 0px;
 }
+footer p{
+    font: transparent;
+}
