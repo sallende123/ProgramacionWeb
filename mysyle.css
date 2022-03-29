@@ -28,7 +28,7 @@ nav img{
 .nav-links{
     flex: 1;
     text-align: right;
-    position: sticky;
+    position: fixed;
     
   }
 /* para que los links se pongan en fila y sacar los puntitos */
