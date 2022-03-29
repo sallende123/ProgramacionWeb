@@ -248,8 +248,9 @@ h3{
 footer{
     position: fixed;
     bottom: 0px;
+    right: 50%;
 }
 footer p{
     font: transparent;
-    left: 50%;
+    
 }
