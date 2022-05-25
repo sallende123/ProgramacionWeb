@@ -96,6 +96,7 @@ nav img{
     background: transparent;
     position: relative;
     cursor: pointer;
+    margin-top: 10px;
 }
 /*para que haga efecto cuando paso mouse por boton*/
 .hero-btn:hover{
