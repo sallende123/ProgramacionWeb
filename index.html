@@ -1,118 +1,136 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=x, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=x, initial-scale=1.0" />
     <title>Bruja Roja FC</title>
-    <link rel="stylesheet" href="./mysyle.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
-</head>
-<body> 
+    <link rel="stylesheet" href="./mysyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+    />
+  </head>
+  <body>
     <!-- Hago un header con el logo, y luego agrego una lista de links en nav, que luego acomodo en css-->
     <!-- Creo div para crear distintas secciones-->
     <!-- en i agregue dos iconos que saca de una galeria, uno para cerrar menu y otro de barras de menu, esto es para el celu-->
-<section class="header">
-    <nav>
-        <a href="index.html"><img src="https://scontent.faep9-1.fna.fbcdn.net/v/t39.30808-6/277252772_2158995827609051_8281622949409034549_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=730e14&_nc_ohc=092NKvf0IqsAX88yLE-&_nc_ht=scontent.faep9-1.fna&oh=00_AT_IRkOoQzgEL54X4Tbt3Y78BKjpN9ZNi29BDKb6jJp92w&oe=625A6616"></a>
+    <section class="header">
+      <nav>
+        <a href="index.html"
+          ><img
+            src="https://scontent.faep9-1.fna.fbcdn.net/v/t39.30808-6/277252772_2158995827609051_8281622949409034549_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=730e14&_nc_ohc=092NKvf0IqsAX88yLE-&_nc_ht=scontent.faep9-1.fna&oh=00_AT_IRkOoQzgEL54X4Tbt3Y78BKjpN9ZNi29BDKb6jJp92w&oe=625A6616"
+        /></a>
         <div class="nav-links" id="navLinks">
-            <!--agrego pequenio codigo en java para poder cerrar menu en movil-->
-           <i class="fa fa-times" onclick="hideMenu()"></i>
-           
-            <ul>
-                <li><a href="">HOME</a></li>
-                <li><a href="">ABOUT</a></li>
-                <li><a href="">EQUIPO</a></li>
-                <li><a href="">STATS</a></li>
-                <li><a href="">CONTACTO</a></li>
-            </ul>
-    
-        </div>
-            <!--para abrir menu en movil-->
-        <i class="fa fa-bars" onclick="showMenu()"></i>
+          <!--agrego pequenio codigo en java para poder cerrar menu en movil-->
+          <i class="fa fa-times" onclick="hideMenu()"></i>
 
-    </nav>
-<div class="text-box"> 
-        <!-- con el br hago que se hagan dos lineas-->  
-        <h1>Bruja Roja FC</h1>
-        <p>Bruja Roja FC es un equipo de Liga Nunez que poco a poco va ganando terreno.<br> Unite a esta pasion alocada y se parte del club con mas aguante de la liga.</p>
+          <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">EQUIPO</a></li>
+            <li><a href="">STATS</a></li>
+            <li><a href="">CONTACTO</a></li>
+          </ul>
+        </div>
+        <!--para abrir menu en movil-->
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <div class="text-box">
+        <!-- con el br hago que se hagan dos lineas-->
+        <h1>Historify</h1>
+        <p>
+          Descubrí la app ideal para apasionados e aficionados de la historia.
+          Aprende cada día de forma sencilla y rápida sobre un suceso histórico
+          interesante.
+        </p>
         <!-- pongo para que el link sea un boton-->
         <a href="" class="hero-btn">Visitanos para conocer mas</a>
-</div>
-
-</section>
-<!--seccion de equipo-->
-<section class="Equipo">
-    <h1>El plantel de la Bruja Roja FC</h1>
-    <p>Estos son los jugadores que dejan todo en la cancha en cada partido</p>
-    <div class="row">
-    <!--agregue las posiciones como columnas en la seccion equipo-->
+      </div>
+    </section>
+    <!--seccion de equipo-->
+    <section class="Equipo">
+      <h1>El plantel de la Bruja Roja FC</h1>
+      <p>Estos son los jugadores que dejan todo en la cancha en cada partido</p>
+      <div class="row">
+        <!--agregue las posiciones como columnas en la seccion equipo-->
         <div class="posiciones-col">
-            <h3>Delanteros</h3>
-            <p>Santiago Allende, 11<br>Ulises Bossini, 91<br>Agustin Gadano, 7</p>
+          <h3>Delanteros</h3>
+          <p>
+            Santiago Allende, 11<br />Ulises Bossini, 91<br />Agustin Gadano, 7
+          </p>
         </div>
         <div class="posiciones-col">
-            <h3>Mediocampistas</h3>
-            <p>Manuel Garcia del Solar, 13<br>Daniel Episcopo, 30<br>Martin Rossi, 10<br>Santiago Hitters, 69</p>
+          <h3>Mediocampistas</h3>
+          <p>
+            Manuel Garcia del Solar, 13<br />Daniel Episcopo, 30<br />Martin
+            Rossi, 10<br />Santiago Hitters, 69
+          </p>
         </div>
         <div class="posiciones-col">
-            <h3>Defensores</h3>
-            <p>Francisco Ramaccioti, 4<br>Guillermo Episcopo, 9<br>Ignacio Moreno, 42<br>Lautaro Tevez, 3<br>Lorenzo Navajas, 2</p>
+          <h3>Defensores</h3>
+          <p>
+            Francisco Ramaccioti, 4<br />Guillermo Episcopo, 9<br />Ignacio
+            Moreno, 42<br />Lautaro Tevez, 3<br />Lorenzo Navajas, 2
+          </p>
         </div>
         <div class="posiciones-col">
-            <h3>Arquero</h3>
-            <p>Facundo Bugada, 1</p>
+          <h3>Arquero</h3>
+          <p>Facundo Bugada, 1</p>
         </div>
-
-
-    </div>
-</section>
+      </div>
+    </section>
     <!-- STATS-->
-<section class="stats">
-    <h1>Las estadisticas del equipo</h1>
-    <p>Goles y meritos</p>
-    <!--creo una imagen con titulo para cada jugador destacado-->
-    <div class="row">
+    <section class="stats">
+      <h1>Las estadisticas del equipo</h1>
+      <p>Goles y meritos</p>
+      <!--creo una imagen con titulo para cada jugador destacado-->
+      <div class="row">
         <div class="stats-col">
-            <img src="C:\Users\Santi\Downloads\WhatsApp Image 2022-04-07 at 17.26.52.jpeg">
-            <div class="layer">
-                <h3>Jugador Fair Play, Martin Rossi</h3>
-        
-            </div>
+          <img
+            src="C:\Users\Santi\Downloads\WhatsApp Image 2022-04-07 at 17.26.52.jpeg"
+          />
+          <div class="layer">
+            <h3>Jugador Fair Play, Martin Rossi</h3>
+          </div>
         </div>
         <div class="stats-col">
-            <img src="https://scontent.faep9-3.fna.fbcdn.net/v/t39.30808-6/277108752_2159148227593811_8695582713870206244_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=730e14&_nc_ohc=Pt4JWuUEJIAAX_En24z&_nc_ht=scontent.faep9-3.fna&oh=00_AT9DuZQ7ZUP0FW3tqEA0heI9yBuXtRC3Puqef4DHgF-HRg&oe=625BC696">
-            <div class="layer">
-                <h3>Goleador, Agustin Gadano </h3>
-            
-            </div>
-            
+          <img
+            src="https://scontent.faep9-3.fna.fbcdn.net/v/t39.30808-6/277108752_2159148227593811_8695582713870206244_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=730e14&_nc_ohc=Pt4JWuUEJIAAX_En24z&_nc_ht=scontent.faep9-3.fna&oh=00_AT9DuZQ7ZUP0FW3tqEA0heI9yBuXtRC3Puqef4DHgF-HRg&oe=625BC696"
+          />
+          <div class="layer">
+            <h3>Goleador, Agustin Gadano</h3>
+          </div>
         </div>
         <div class="stats-col">
-            <img src="C:\Users\Santi\Desktop\imagenes\qfa.jpeg">
-            <div class="layer">
-                <h3>Figura de multiples partidos, Facundo Bugada </h3>
-            </div>
+          <img src="C:\Users\Santi\Desktop\imagenes\qfa.jpeg" />
+          <div class="layer">
+            <h3>Figura de multiples partidos, Facundo Bugada</h3>
+          </div>
         </div>
-        
-    </div>
-</section>
-<!--Java script para el Menu interactivo-->
-<script>
-    /* creo las funciones para que se cierra y abra el menu en movil, lo conecta a las variables creadas arriba de showMenu y hideMenu*/
-    var navLinks = document.getElementById("navLinks")
-    function showMenu(){
-        navLinks.style.right="0";
-    }
-    function hideMenu(){
+      </div>
+    </section>
+    <!--Java script para el Menu interactivo-->
+    <script>
+      /* creo las funciones para que se cierra y abra el menu en movil, lo conecta a las variables creadas arriba de showMenu y hideMenu*/
+      var navLinks = document.getElementById("navLinks");
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
         navLinks.style.right = "-200px";
-    }
-</script>
-<footer><p>Legales: al entrar a esta pagina se hace hincha del club automaticamente</p></footer>
-</body>
-
+      }
+    </script>
+    <footer>
+      <p>
+        Legales: al entrar a esta pagina se hace hincha del club automaticamente
+      </p>
+    </footer>
+  </body>
 </html>
