@@ -1,0 +1,483 @@
+/**********************************************************/
+/* HEADDER */
+/************************************************************/
+.header {
+  display: flex; /*se pongo en la misma linea logo y navbar*/
+  justify-content: space-between; /*para que se dividan el espacio de sobra entre si de forma igual poneiendolo en el medio*/
+  align-items: center; /*se alinien el logo y navbar*/
+  background-color: #faeaea;
+  height: 9.6rem; /*definimos la altura porque queremos un stivky navbar*/
+  padding: 0 4.8rem;
+  position: relative;
+}
+.logo {
+  height: 8.4rem;
+}
+/*******************************************************/
+/* NAVBAR*/
+/**********************************************************/
+
+.main-nav-list {
+  list-style: none; /*saco subrayado*/
+  display: flex; /*se pongan uno al lado del otro los links*/
+  gap: 4.8rem; /*espacio entre links*/
+  align-items: center; /*se pongan alineados*/
+}
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block; /*para poner padding*/
+  text-decoration: none; /*saco subrayado*/
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s; /*para que cambie de color mas clean*/
+}
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #a12222;
+}
+.main-nav-link.nav-accion:link,/*al poner todo junto en la clase le doy alta prioridad y se aplica tambien todo el codigo de la otra clase*/
+.main-nav-link.nav-accion:visited {
+  /*hago que el link que me lleva a la accion principal parezca un boton*/
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #c92a2a;
+}
+.main-nav-link.nav-accion:hover,
+.main-nav-link.nav-accion:active {
+  background-color: #a12222; /*la transicion se aplica la que puse antes*/
+}
+/*MOBILE*/
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+/*************************************************************/
+/* HERO /*
+/***************************************************************/
+
+.section-hero {
+  background-color: #faeaea;
+  padding: 4.8rem 0 9.6rem 0; /*uso padding para crear espacio entre secciones (top side)*/
+  /*acompanado del background color me sirve para marcar cada seccion*/ /*top left bottom right*/
+}
+
+.hero {
+  /*lo hago mas ancho que el container por motivos esteticos*/
+  max-width: 130rem; /*si cambio el tamanio de la fuente cambia el ancho*/
+  /*si el width es menor que el viewport se adapta al viewport, si es mayor se queda con el width que tiene*/
+  margin: 0 auto; /*para centrar el hero en el viewport*/
+  display: grid; /*activo css grid*/
+  grid-template-columns: 1fr 1fr; /*creo dos columnas que se dividan el espacio por igual*/
+  /*las columanas son hero-text-box y hero-img-box, se dividen por igual todo el espacio de su father element section-hero*/
+  align-items: center; /*centrar los elementos   en el eje vertical*/
+  gap: 9.6rem; /*espacio entre columnas*/
+  padding: 0 3.2rem; /*para que no este pegado al borde el contenido cuando achico el viewport*/
+}
+
+.hero-descripcion {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.hero-img {
+  width: 100%; /*para que la imagen ocupe el 100% de hero-img-box es decir su father element que es su columna*/
+  border-radius: 5%;
+}
+
+.equipo-de-historiadores {
+  display: flex; /*para poner el texto al costaado de las imagenes*/
+  margin-top: 8rem;
+  align-items: center; /*alinear texto a imagenes*/
+  gap: 1.6rem;
+}
+.imagen-de-historiadores {
+  display: flex; /*para que las imagenes se pongan en fila*/
+}
+.imagen-de-historiadores img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%; /*la vuelvo circulo*/
+  margin-right: -1.6rem; /*para que las imagenes esten un poco encimadas*/
+  border: 3px solid #faeaea; /*le doy bordecito a las imagenes para que quede mas lindo*/
+}
+.imagen-de-historiadores img:last-child {
+  margin: 0;
+} /*le quito el margen a la ultima imagen*/
+.texto-historiadores {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.texto-historiadores span {
+  font-weight: 700;
+  color: #a12222;
+}
+/*************************************************************/
+/* SECCION APARECIOMOS EN  /*
+/***************************************************************/
+.section-aparicion {
+  /*padding a toda la seccion*/
+  padding: 4.8rem 0 3.2rem 0;
+}
+.heading-aparicion-en {
+  /*el textito de aparecimos en*/
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  color: #999;
+}
+.logos {
+  display: flex; /*para poner los logos un al lado del otro*/
+  justify-content: space-around; /*agrega espacio igual entre los logos y en los bordes*/
+}
+.logos img {
+  /*le doy a los logos el mismo tamanio*/
+  height: 3.2rem;
+  filter: grayscale(100%) /*vuelvo los logos gris*/;
+  opacity: 50%;
+}
+/*************************************************************/
+/* SECCION DE COMO FUNCIONA  /*
+/***************************************************************/
+
+.section-como {
+  padding: 9.6rem 0;
+}
+.pasos-imagen {
+  width: 60%; /*ocupa el 60% del parent container*/
+}
+.paso-numero {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+.descripcion-del-paso {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+.pasos-img-box {
+  /*donde va la imagen y el circulo*/
+  display: flex; /*centro la imagen en su contenedor*/
+  align-items: center;
+  justify-content: center;
+  position: relative; /*porque es el father de un absolute*/
+}
+.pasos-img-box::before {
+  /*creo circulo que va detras de imagen*/
+  /*creo pseudo element, elemento que sera hijo del elemento seleccionado. Lo creo en CSS y no hace falta que lo ponga en HTML*/
+  content: ""; /*le tengo que dar cualquier contenido*/
+  display: block;
+  width: 60%; /*anchura flexible*/
+  padding-bottom: 60%; /*ya que no me cambiaba cuando cambiaba la altura, uso padding para que quede cuadrado*/
+  background-color: #faeaea;
+  position: absolute; /*para poder ponerlo justo detras de la imagen, moverlo libremente*/
+  top: 50%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /*mueve al elemento el 50% de su propia altura y anchura*/
+  border-radius: 50%; /*para hacerla circuulo*/
+  z-index: -2; /*para que la imagen este sobre el circulo*/
+}
+/**************************************************************/
+/* SECCION TESTIMONIOS  /*
+/***************************************************************/
+.section-testimonios {
+  background-color: #faeaea;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center; /*soluciono que los espacios horizontales entre fotos se achiquen*/
+}
+.testimonios {
+  /*creo nueva table porque la rehusable tenia mucho espacio*/
+  display: grid; /*creo la tabla donde va todo lo relacionado con cada testimonio*/
+  grid-template-columns: 1fr 1fr;
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+.imagen-testimonial {
+  /*redondeo las imagenes y les pongo anchura fija*/
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+.texto-testimonial {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+.nombre-testimonial {
+  font-size: 1.6rem;
+  color: #696969;
+}
+.gallery-item img {
+  display: block; /*para que se vaya espacio blanco entre imagenes*/
+
+  width: 100%;
+  transition: all 0.4s; /*para que el hover sea smooth*/
+}
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /*tres columnas iguales*/
+  gap: 1.6rem; /*espacio entre fotos*/
+  padding: 1.6rem; /*espacio entre fotos y border*/
+}
+.container-testimonial {
+  padding: 9.6rem; /*espacio entre borde y contenido*/
+}
+.gallery-item img:hover {
+  transform: scale(1.1); /*para que resalten cuando paso el mouse*/
+}
+.gallery-item {
+  overflow: hidden; /*para que la animacion de resaltar no sobrepase al father element*/
+}
+/**************************************************************/
+/* SECCION VERSIONES  /*
+/***************************************************************/
+.section-versiones {
+  padding: 9.6rem 0;
+}
+.versiones-header {
+  text-align: center; /*centro el header de las versiones*/
+  margin-bottom: 4.8rem;
+}
+.nombre-version {
+  color: #a12222;
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75;
+  margin-bottom: 3.2rem;
+}
+.precio-version {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+.texto-version {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+.precio-version span {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+.descarga-la-app {
+  text-align: center;
+  margin-top: 4.8rem;
+}
+.versiones {
+  border-radius: 11px;
+
+  width: 75%;
+}
+.version-gratis {
+  justify-self: end; /*sirvio para alinear las dos tarjetas de versiones con el eje h*/
+  border: 2px solid #faeaea;
+  padding: 4.6rem; /*para compensar por el borde de 2px pongo menos padding aca*/
+}
+.version-premium {
+  background-color: #faeaea;
+  padding: 4.8rem;
+  position: relative;
+  overflow: hidden; /*paraa que la etiqueta no salgo de los bordes*/
+}
+.version-premium::after {
+  /*fui probando con medidas distintaas*/
+  content: "Conveniente";
+  position: absolute;
+  top: 6%;
+  right: -18%;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background-color: #ffd43b;
+  padding: 0.8rem 8rem;
+  color: #333;
+  transform: rotate(45deg); /*lo hago girar*/
+}
+.icon-caracteristica {
+  color: #c92a2a;
+  height: 3.2rem;
+  width: 3.2rem;
+  margin-bottom: 3.2rem;
+  background-color: #faeaea;
+  padding: 1.6rem;
+  border-radius: 50%;
+}
+.texto-caracteristica {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+.titulo-caracteristica {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+.detalles-version {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+/**************************************************************/
+/* SECCION ACCION  /*
+/***************************************************************/
+.section-accion {
+  padding: 4.8rem 0 12.8rem 0;
+}
+.accion {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: #c92a2a;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+  background-image: linear-gradient(to right bottom, #d45555, #c92a2a);
+  overflow: hidden; /*para que la imagen respete el redondeo de los border de su container*/
+}
+.imagen-caja-accion {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(212, 85, 85, 0.15),
+      rgba(201, 42, 42, 0.15)
+    ),
+    url("../img/estudiando.jpg"); /*para que la imagen este debajo de una capa de color*/
+  background-size: cover; /*que la imagen cubra el fondo*/
+  background-position: center;
+}
+.texto-caja-accion {
+  color: #3c0d0d;
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+.accion .heading-secundario {
+  color: #3c0d0d;
+  margin-bottom: 3.2rem;
+}
+.accion-texto {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+.accion-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+.accion-form label {
+  display: block; /*para que tenga su propia linea el label*/
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+.accion-form input,
+.accion-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit; /*para que herede la font family de su parent*/
+  border: none;
+  color: inherit;
+  background-color: #faeaea;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.accion-form input::placeholder {
+  color: #aaa;
+}
+.btn-form {
+  background-color: #3c0d0d;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+.btn-form:hover {
+  background-color: #fff;
+  color: #555;
+}
+.accion *:focus {
+  /*cambio el focus de el form para que se vea*/
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+/********************************************************/
+/* SECCION FOOTER*/
+/********************************************************/
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+.footer-navigation {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
+}
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  margin-bottom: 2rem;
+}
+.copyright {
+  font-size: 1.4rem;
+  color: #767676;
+  line-height: 1.6rem;
+  margin-top: auto;
+}
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+.contacto {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.direccion {
+  margin-bottom: 2.4rem;
+}

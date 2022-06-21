@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /*agregar padding no cambia la anchura, ni altura*/
+} /*reseteo global para que este en modo default la pagina*/
+html {
+  font-size: 62.5%; /*va a ser el 62.5% del default que es 16 es decir 10 y luego del nuevo valor que ponga el usuario*/
+  /*1 rem = 10px*/
+  /*uso rem para que si el usuario quiere cambiar el tamanio de la fuente las anchuras se adapten automaticamente*/
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Rubik", sans-serif; /*rubik la descargue de google font, sans serif es la segunda opcion ya que es  la familia de fuente mas comun y usada*/
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  overflow-x: hidden; /*para efecto del mobile nav, no permite scrolear horizontalmente*/
+}
+/********************************************************/
+/* COMPONENETES GENERALES REUTILIZABLES*/
+/********************************************************/
+.grid {
+  /*base de la grid reutilizable*/
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+}
+
+.grid:not(:last-child) {
+  /*solo las grid que no sean last child tendran este margen*/
+  margin-bottom: 9.6rem;
+}
+.grid-2-cols {
+  /*dos columnas*/
+  grid-template-columns: repeat(2, 1fr); /*dos columnas iguales*/
+}
+.grid-3-cols {
+  grid-template-columns: repeat(3, 1fr); /*tres columnas iguales*/
+}
+.grid-4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid-5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+.grid-center-vertical {
+  align-items: center; /*creo clase para centrar verticalmente solo la grid de la seccion 2*/
+}
+.container {
+  /*lo vamos a reutillizar para centrar el contenido de la pagina*/
+  max-width: 120rem; /*anchura maxima, cuando el viewport sea menor el container sera del tamanio del viewport, cuando el viewport sea mayor el container se queda en 120rem*/
+  margin: 0 auto; /*el auto le da al container el mismo margen a derecha e izquierda, lo que hace que este se centre*/
+  padding: 0 3.2rem; /*para que las columnas no esten pegadas al borde*/
+}
+.heading-primario,
+.heading-secundario,
+.tercer-heading {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+.heading-primario {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+.heading-secundario {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+.tercer-heading {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+.subheading {
+  display: block;
+  font-size: 1.6em;
+  font-weight: 500;
+  color: #a12222;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+.btn,
+.btn:link,
+.btn:visited/*hago el procedimiento porque son links realmente, no botones*/ {
+  display: inline-block; /*para poder usar padding*/
+  font-weight: 600;
+  font-size: 2rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px; /*redondear bordes*/
+  text-decoration: none; /*sacar subrayado*/
+  transition: background-color 0.3s; /*cuales propiedad quiero animar usando una transicion, cuantos segundos. Sirve para que el hover sea mas realista*/
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-full:link,
+.btn-full:visited/*caracteristicas especificas para el boton principal*/ {
+  background-color: #c92a2a;
+  color: #fff;
+}
+.btn-full:hover,
+.btn-full:active/*caracteristicas especificas para el boton principal*/ {
+  background-color: #a12222;
+}
+.btn-outline:link,
+.btn-outline:visited/*caracteristicas especificas para el boton secundario*/ {
+  background-color: #fff;
+  color: #555;
+}
+.btn-outline:hover,
+.btn-outline:active/*caracteristicas especificas para el boton secundario*/ {
+  background-color: #faeaea;
+  box-shadow: inset 0 0 0 3px #fff; /*truco para agregar borde adentro del boton usando inset que pone sombra dentro del elemento, uso boxshadow ya que la propiedad de border provoca que se mueva todo el layout*/
+}
+
+.margin-right-sm/*creo esta sub clase para usar en elementos los cuales repito pero solo en algunos de ellos quiero agrgar margen
+por ejemplo el boton principal, el cual uso varias veces pero no en todas lo quiero con margen*/ {
+  margin-right: 1.6rem !important; /*le doy prioridad para que siempre actue*/
+}
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important  ;
+}
+.center-text {
+  text-align: center;
+}
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  line-height: 1.2;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #c92a2a;
+}
+*:focus {
+  outline: none;
+  /*borde cuando selecciono algo haciendo  click*/
+  box-shadow: 0 0 0 0.8rem hsla(0, 65%, 48%, 0.505);
+}
