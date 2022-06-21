@@ -3,137 +3,568 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=x, initial-scale=1.0" />
-    <title>Historify</title>
-    <link rel="stylesheet" href="./mysyle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@100;200;300;400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
-    />
+    <!--agrego fuente de google fonts (rubik)-->
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script defer src="js/script.js"></script>
+
+    <!--conencto html a css-->
+    <title>Historify</title>
   </head>
   <body>
-    <!-- Hago un header con el logo, y luego agrego una lista de links en nav, que luego acomodo en css-->
-    <!-- Creo div para crear distintas secciones-->
-    <!-- en i agregue dos iconos que saca de una galeria, uno para cerrar menu y otro de barras de menu, esto es para el celu-->
-    <section class="header">
-      <nav>
-        <a href="index.html"
-          ><img src="https://i.ibb.co/YbR2Gjt/descarga-1.png"
-        /></a>
-        <div class="nav-links" id="navLinks">
-          <!--agrego pequenio codigo en java para poder cerrar menu en movil-->
-          <i class="fa fa-times" onclick="hideMenu()"></i>
-
-          <ul>
-            <li><a href="">HOME</a></li>
-            <li><a href="">ABOUT</a></li>
-            <li><a href="">CARACTERISTICAS</a></li>
-            <li><a href="">CLIENTES</a></li>
-            <li><a href="">CONTACTO</a></li>
-          </ul>
-        </div>
-        <!--para abrir menu en movil-->
-        <i class="fa fa-bars" onclick="showMenu()"></i>
+    <header class="header nav-open">
+      <a href="#">
+      <!--creo header donde ira logo y navbar-->
+      <img
+        class="logo"
+        class="Historify logo"
+        src="img/logo-his-removebg-preview.png"
+      /></a><!--para volver para arriba cuando toco el logo-->
+      <nav class="main-nav">
+        <!--formato para navbar-->
+        <ul class="main-nav-list">
+          <!--lista de links porque luego voy a hacer que te dirigan a otras secciones-->
+          <li><a class="main-nav-link" href="#como">Como funciona </a></li>
+          <li><a class="main-nav-link" href="#test">Testimonios</a></li>
+          <li><a class="main-nav-link" href="#ver">Versiones</a></li>
+          
+          <li><a class="main-nav-link nav-accion" href="#cta">Proba gratis</a></li>
+          <!--el ultimo link quiero que sea algo que te lleve a la accion principal, le cambio el estilo-->
+        </ul>
       </nav>
-      <div class="text-box">
-        <!-- con el br hago que se hagan dos lineas-->
-        <h1>Historify</h1>
-        <h2>
-          Descubrí la app ideal para apasionados e aficionados de la historia.
-          Aprende cada día de forma sencilla y rápida sobre un suceso histórico
-          interesante.
-        </h2>
-        <p class="textito">
-          Descarga la app y recibí una notificación todos los días para poder
-          leer sobre un suceso histórico que sucedió ese mismo día, pero en el
-          pasado. ¡Una efeméride, que además de hacerte aprender te permite
-          tener siempre un tema de conversación!
-        </p>
-        <!-- pongo para que el link sea un boton-->
-        <a href="" class="hero-btn">Descarga la app</a>
-      </div>
-    </section>
-    <!--seccion de equipo-->
-    <section class="Equipo">
-      <h1>El plantel de la Bruja Roja FC</h1>
-      <p>Estos son los jugadores que dejan todo en la cancha en cada partido</p>
-      <div class="row">
-        <!--agregue las posiciones como columnas en la seccion equipo-->
-        <div class="posiciones-col">
-          <h3>Delanteros</h3>
-          <p>
-            Santiago Allende, 11<br />Ulises Bossini, 91<br />Agustin Gadano, 7
-          </p>
-        </div>
-        <div class="posiciones-col">
-          <h3>Mediocampistas</h3>
-          <p>
-            Manuel Garcia del Solar, 13<br />Daniel Episcopo, 30<br />Martin
-            Rossi, 10<br />Santiago Hitters, 69
-          </p>
-        </div>
-        <div class="posiciones-col">
-          <h3>Defensores</h3>
-          <p>
-            Francisco Ramaccioti, 4<br />Guillermo Episcopo, 9<br />Ignacio
-            Moreno, 42<br />Lautaro Tevez, 3<br />Lorenzo Navajas, 2
-          </p>
-        </div>
-        <div class="posiciones-col">
-          <h3>Arquero</h3>
-          <p>Facundo Bugada, 1</p>
-        </div>
-      </div>
-    </section>
-    <!-- STATS-->
-    <section class="stats">
-      <h1>Las estadisticas del equipo</h1>
-      <p>Goles y meritos</p>
-      <!--creo una imagen con titulo para cada jugador destacado-->
-      <div class="row">
-        <div class="stats-col">
-          <img
-            src="C:\Users\Santi\Downloads\WhatsApp Image 2022-04-07 at 17.26.52.jpeg"
-          />
-          <div class="layer">
-            <h3>Jugador Fair Play, Martin Rossi</h3>
+      <!--arranca la navbar para celulares-->
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline">
+
+      </ion-icon>
+      <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+    </button>
+    </header>
+    <main><!--dentro de main va informacion especifica de esta web-->
+      <section class="section-hero">
+        <div class="hero">
+          <!--nuestro css-grid container-->
+          <!--las section se crean cuando son parte de algo mas grande y son varias-->
+          <div class="hero-text-box">
+            <!--el div actua como una caja si significado semantico especifico-->
+            <h1 class="heading-primario">
+              Aprende historia de forma divertida y simple
+            </h1>
+            <p class="hero-descripcion">
+              Decarga la app y recibi una notificacion todos los dias para poder
+              leer sobre un suceso historico que sucedio ese mismo dia, pero en
+              el pasado. Una efemeride, que ademas de hacerte aprender te
+              permite tener siempre un tema de conversacion!
+            </p>
+            <a href="#cta" class="btn btn-full margin-right-sm"
+              ><!--creo subclase para poder crear un boton principal y otro secundario-->Descarga
+              la app!</a
+            ><!--es link porque un boton en realidad es para hacer una accion, no para derivar a otra pagina -->
+            <a href="#como" class="btn btn-outline">Saber mas &darr;</a
+            ><!--&darr es una flecha emoji-->
+            <div class="equipo-de-historiadores">
+              <div class="imagen-de-historiadores">
+                <img src="img/customers/customer-1.jpg" alt="historiador" />
+                <img src="img/customers/customer-2.jpg" alt="historiador" />
+                <img src="img/customers/customer-3.jpg" alt="historiador" />
+                <img src="img/customers/customer-4.jpg" alt="historiador" />
+                <img src="img/customers/customer-5.jpg" alt="historiador" />
+                <img src="img/customers/customer-6.jpg" alt="historiador" />
+              </div>
+              <p class="texto-historiadores">
+                Trabajamos con un equipo de <span>historiadores</span>
+              </p>
+            </div>
+          </div>
+          <div class="hero-img-box">
+            <img
+              src="img/hero-img-historify-min.jpg"
+              class="hero-img"
+              alt="archivos historicos"
+            />
           </div>
         </div>
-        <div class="stats-col">
-          <img
-            src="https://scontent.faep9-3.fna.fbcdn.net/v/t39.30808-6/277108752_2159148227593811_8695582713870206244_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=730e14&_nc_ohc=Pt4JWuUEJIAAX_En24z&_nc_ht=scontent.faep9-3.fna&oh=00_AT9DuZQ7ZUP0FW3tqEA0heI9yBuXtRC3Puqef4DHgF-HRg&oe=625BC696"
-          />
-          <div class="layer">
-            <h3>Goleador, Agustin Gadano</h3>
+      </section>
+      <section class="section-aparicion">
+        <div class="container">
+          <h2 class="heading-aparicion-en">Aparecimos en</h2>
+          <div class="logos">
+            <img src="img/national-geographic-logo.png" alt="natgeo logo" />
+            <img src="img/logos/business-insider.png" alt="business logo" />
+            <img
+              src="img/The_History_Channel-Logo.svg.png"
+              alt="la nacion logo"
+            />
+            <img src="img/logos/the-new-york-times.png" alt="nyt logo" />
+            <img src="img/logos/forbes.png" alt="history logo" />
           </div>
         </div>
-        <div class="stats-col">
-          <img src="C:\Users\Santi\Desktop\imagenes\qfa.jpeg" />
-          <div class="layer">
-            <h3>Figura de multiples partidos, Facundo Bugada</h3>
+      </section>
+      <section class="section-como" id="como">
+        <div class="container">
+          <!--sigo usando container para que este centrado todo-->
+          <!--creo el header de la segunda seccion de la pagina-->
+          <span class="subheading">Como funciona</span>
+          <h2 class="heading-secundario">
+            Aprender historia en 3 simple pasos
+          </h2>
+        </div>
+        <div class="container grid grid-2-cols grid-center-vertical">
+          <!--PASO 1-->
+          <div class="pasos-text-box">
+            <p class="paso-numero">01</p>
+            <h3 class="tercer-heading">Registrate</h3>
+            <p class="descripcion-del-paso">
+              Podes resgistrarte desde tu cuenta de Facebook, Google o Apple, no
+              compartiremos nada sin tu permiso!
+            </p>
+          </div>
+          <div class="pasos-img-box">
+            <img
+              src="img/undraw_access_account_re_8spm-_1__1.png"
+              class="pasos-imagen"
+              alt="menu de registro"
+            />
+          </div>
+          <!--PASO 2-->
+          <div class="pasos-img-box">
+            <img
+              src="img/undraw_my_notifications_re_ehmk (2).png"
+              class="pasos-imagen"
+              alt="celular con notificaciones"
+            />
+          </div>
+          <div class="pasos-text-box">
+            <p class="paso-numero">02</p>
+            <h3 class="tercer-heading">Activa las notificaciones</h3>
+            <p class="descripcion-del-paso">
+              Activa las notificaciones y empeza tu proceso de aprendizaje al
+              recibir todos los dias un suceso historico distinto que sucedio en esa misma fecha pero en el pasado.
+            </p>
+          </div>
+          <!--PASO 3-->
+          <div class="pasos-text-box">
+            <p class="paso-numero">03</p>
+            <h3 class="tercer-heading">Invita a tus amigos</h3>
+            <p class="descripcion-del-paso">
+              Recomendale la app a tus amigos y aprende en grupo.
+              Obtendras beneficios exclusivos con cada recomendacion.
+            </p>
+          </div>
+
+          <div class="pasos-img-box">
+            <img
+              src="img/undraw_referral_re_0aji (2).png"
+              class="pasos-imagen"
+              alt="recomendando a amigo"
+            />
           </div>
         </div>
+      </section>
+      <section class="section-testimonios" id="test">
+        <div class="container-testimonial">
+          <span class="subheading">Testimonios</span>
+          <h2 class="heading-secundario">
+            Ya son miles los usuarios sastifechos con la app!
+          </h2>
+
+          <div class="testimonios">
+            <figure class="testimonio">
+              <!--uso figure cuando tengo caption e imagen-->
+              <img
+                class="imagen-testimonial"
+                alt="foto de Juan Lopez"
+                src="img/customers/dave.jpg"
+              />
+              <blockquote class="texto-testimonial">
+                Gracias a la app me comenzo a gustar la historia, aprender paso
+                de ser algo aburrido y tedioso a algo facil y entretenido.
+              </blockquote>
+              <!--uso blockquote cuando cito-->
+              <p class="nombre-testimonial">&mdash; Juan Lopez</p>
+              <!--mdash es una entidad que invoco-->
+            </figure>
+            <figure class="testimonio">
+              <!--uso figure cuando tengo caption e imagen-->
+              <img
+                class="imagen-testimonial"
+                alt="foto de Ramiro"
+                src="img/customers/ben.jpg"
+              />
+              <blockquote class="texto-testimonial">
+                Me sirvio como herramienta a la hora de dar clases de historia
+                en el colegio, gracias a la app los alumnos se interesaron mucho
+                en los contenidos!
+              </blockquote>
+              <!--uso blockquote cuando cito-->
+              <p class="nombre-testimonial">&mdash; Ramiro Gutierrez</p>
+              <!--mdash es una entidad que invoco-->
+            </figure>
+            <figure class="testimonio">
+              <!--uso figure cuando tengo caption e imagen-->
+              <img
+                class="imagen-testimonial"
+                alt="foto de Esteban"
+                src="img/customers/steve.jpg"
+              />
+              <blockquote class="texto-testimonial">
+                La app me sirve para divertirme ya que soy una persona muy
+                curiosa, tambien me permite siempre tener un tema de
+                conversacion!
+              </blockquote>
+              <!--uso blockquote cuando cito-->
+              <p class="nombre-testimonial">&mdash; Esteban Quintero</p>
+              <!--mdash es una entidad que invoco-->
+            </figure>
+            <figure class="testimonio">
+              <!--uso figure cuando tengo caption e imagen-->
+              <img
+                class="imagen-testimonial"
+                alt="foto de Romina"
+                src="img/customers/hannah.jpg"
+              />
+              <blockquote class="texto-testimonial">
+                Una app sencilla de usar que sirve para nutrirse de
+                conocimientos de forma diaria. Me encanto!
+              </blockquote>
+              <!--uso blockquote cuando cito-->
+              <p class="nombre-testimonial">&mdash; Romina Sand</p>
+              <!--mdash es una entidad que invoco-->
+            </figure>
+          </div>
+        </div>
+        <div class="galeria">
+          <!--creo galeria porque voy a querer que las imagenes tenga hover-->
+          <figure class="gallery-item">
+            <img
+              src="img/pexels-jimmy-teoh-951531-min.jpg"
+              alt="foto de
+          evento historico"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/pexels-arralyn-2402926-min.jpg"
+              alt="foto de
+          evento historico"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/pexels-pixabay-208674-min.jpg"
+              alt="foto de
+          evento historico"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/nik-shuliahin-JOzv_pAkcMk-unsplash-min.jpg"
+              alt="foto de
+          evento historico"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/boston-public-library-vb-mfGyetPc-unsplash-min.jpg"
+              alt="foto de
+          evento historico"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/pexels-pixabay-73821-min.jpg"
+              alt="foto de
+          evento historico"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/british-library-GQ5ELi84owE-unsplash-min.jpg"
+              alt="foto de
+          evento historico"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/austrian-national-library-mPEfnm_F-b8-unsplash-min.jpg"
+              alt="foto de
+          evento historico"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/library-of-congress-isurIBia05w-unsplash-min.jpg"
+              alt="foto de
+          evento historico"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/museums-victoria-QLezSKMJOnw-uns.jpg"
+              alt="foto de
+          evento historico"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/history-in-hd-e5eDHbmHprg-unsplash-min.jpg"
+              alt="foto de
+          evento historico"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/history-in-hd-rHIiT1Q6GIg-unsplash-min.jpg"
+              alt="foto de
+          evento historico"
+            />
+          </figure>
+        </div>
+      </section>
+      <section class="section-versiones" id="ver">
+        <div class="container">
+          <span class="subheading">Versiones</span>
+          <h2 class="heading-secundario">
+            Descubri las dos versiones disponibles
+          </h2>
+        </div>
+        <div class="container grid grid-2-cols margin-bottom-md">
+          <!--tabla cada columna es una version-->
+          <div class="versiones version-gratis">
+            <header class="versiones-header">
+              <p class="nombre-version">Free</p>
+              <p class="precio-version"><span>$</span>0</p>
+              <p class="texto-version">
+                por mes. Usa las funciones basicas de la app de forma gratuita!
+              </p>
+            </header>
+            <ul class="list">
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Informacion basica</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Almacenamiento limitado</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Anuncios</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="close-outline"></ion-icon>
+              </li>
+            </ul>
+            <div class="descarga-la-app">
+              <a href="#" class="btn btn-full margin-right-sm"
+                ><!--creo subclase para poder crear un boton principal y otro secundario-->Descarga
+                la app!</a
+              >
+            </div>
+          </div>
+          <div class="versiones version-premium">
+            <header class="versiones-header precio-version-premium">
+              <p class="nombre-version">Premium</p>
+              <p class="precio-version"><span>$</span>0,99</p>
+              <p class="texto-version">
+                por mes. Obtene acceso a funcionalidades exclusivas!
+              </p>
+            </header>
+            <ul class="list">
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Informacion <strong>detallada </strong></span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Almacenamiento <strong>ilimitado</strong></span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Sin anuncios</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Suceso historico <strong>extra</strong> </span>
+              </li>
+            </ul>
+            <div class="descarga-la-app">
+              <a href="#" class="btn btn-full">Descarga la app!</a>
+            </div>
+          </div>
+        </div>
+        <div class="container grid">
+          <!--lo hago grid para que ponga el espacio-->
+          <aside class="detalles-version">
+            El precio incluye todos los impuesto aplicables. La sucripcion es
+            cancelable en cualquier momento.
+          </aside>
+          <!--aside porque es informacio no crucial pero va por separado-->
+        </div>
+        <div class="container grid grid-4-cols">
+          <div class="caracteristicas">
+            <ion-icon
+              class="icon-caracteristica"
+              name="information-outline"
+            ></ion-icon>
+            <p class="titulo-caracteristica">Sucesos historicos</p>
+            <p class="texto-caracteristica">
+              Ambas versiones brindan los sucesos con informacion descriptiva,
+              la premium brinda la opcion de acceder a informacion detallada
+              relacionada con el suceso.
+            </p>
+          </div>
+          <div class="caracteristicas">
+            <ion-icon
+              class="icon-caracteristica"
+              name="cloud-download-outline"
+            ></ion-icon>
+            <p class="titulo-caracteristica">Almacenamiento</p>
+            <p class="texto-caracteristica">
+              Almacena dentro de la app los sucesos que mas te interesen para
+              luego volver a leerlos. En la version Free de forma limitada
+              mientras que en la premium de forma ilimitada.
+            </p>
+          </div>
+          <div class="caracteristicas">
+            <ion-icon
+              class="icon-caracteristica"
+              name="thumbs-up-outline"
+            ></ion-icon>
+            <p class="titulo-caracteristica">Intereses especificos</p>
+            <p class="texto-caracteristica">
+              En la version Premium recibiras un suceso historico extra semanal
+              de una tematica que vos eligas
+            </p>
+          </div>
+          <div class="caracteristicas">
+            <ion-icon
+              class="icon-caracteristica"
+              name="shield-checkmark-outline"
+            ></ion-icon>
+            <p class="titulo-caracteristica">Informacion confiable</p>
+            <p class="texto-caracteristica">
+              La informacion historica que se envia es confiable ya que es
+              controlado por historiadores y editores que forman parte del
+              equipo de trabajo
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section-accion" id="cta">
+
+        <div class="container">
+          <div class="accion"><!--para solucionar margin-->
+          <div class="texto-caja-accion">
+            <h2 class="heading-secundario">Premium gratis en primer mes! </h2>
+            <p class="accion-texto">Nuevo conocimiento esta esperandote, no te pierdas la oportunidad de aprender mientras te divertis. Ademas te ofrecemos la 
+              version Premium gratis por un mes.
+            </p>
+            <form class="accion-form">
+              <div>
+              <label for="full-name">Nombre completo</label>
+
+              <input id="full-name" type="text" placeholder="Jorge Ruiz" required/></div>
+              <div><label for="email">Direccion email</label>
+              <input id="email" type="email" placeholder="yo@ejemplo.com" required/></div>
+              
+              <div><label for="elegir-donde">Donde nos conociste?</label>
+              <select id="elegir-donde" required>
+                <option value=""> Elegir opcion </option>
+                <option value="amigos">Amigos o familia</option>
+                <option value="redes">Redes sociales</option>
+                <option value="radio">Radio, TV o diario</option>
+                <option value="Publicidad">Publicidad</option>
+                <option value="otros">Otros</option>
+              </select></div>
+
+              
+              <button class="btn btn-form">Registrarse ahora</button>
+            </form>
+          </div>
+          <div class="imagen-caja-accion" role="img" aria-label="gente estudiando"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container grid grid-5-cols">
+      <div class="logo-col">
+        <a href="#" class="footer-logo">
+        
+        <img
+          class="logo"
+          class="Historify logo"
+          src="img/logo-his-removebg-preview.png"
+        /></a><!--pongo el logo en el footer-->
+        <ul class="social-links">
+          <li><a class="footer-link" href="#"><ion-icon class="social-icon" name="logo-instagram"></ion-icon></a></li>
+          <li><a class="footer-link" href="#"><ion-icon class="social-icon" name="logo-facebook"></ion-icon></a></li>
+          <li><a class="footer-link" href="#"><ion-icon class="social-icon" name="logo-twitter"></ion-icon></a></li>
+        </ul>
+        <p class="copyright">Copyright &copy; <span class="year">2027</span> by Historify, Inc. All rights reserved  </p>
+        
       </div>
-    </section>
-    <!--Java script para el Menu interactivo-->
-    <script>
-      /* creo las funciones para que se cierra y abra el menu en movil, lo conecta a las variables creadas arriba de showMenu y hideMenu*/
-      var navLinks = document.getElementById("navLinks");
-      function showMenu() {
-        navLinks.style.right = "0";
-      }
-      function hideMenu() {
-        navLinks.style.right = "-200px";
-      }
-    </script>
-    <footer>
-      <p>Legales: leer terminos y condiciones</p>
+      <div class="direccion-col">
+        <p class="footer-heading">Contacto</p>
+        <address class="contacto">
+          <p class="direccion">
+            Iguazu 341, Planta baja, CABA, Argentina 
+          </p>
+          <p>
+            <a class="footer-link"  href="tel:11-2472-0911">11-2472-0911</a><br>
+            <a class="footer-link"  href="mailto:sallende@itba.edu.ar">sallende@itba.edu.ar</a> 
+          </p>
+          
+        </address>
+      </div>
+      <nav class="nav-col">
+        <p class="footer-heading">Cuenta</p> 
+        <ul class="footer-navigation">
+          <li><a class="footer-link" href="#">Crear cuenta</a></li>
+          <li><a class="footer-link" href="#">Iniciar sesion</a></li>
+          <li><a class="footer-link" href="#">iOS app</a></li>
+          <li><a class="footer-link" href="#">Android app</a></li>
+
+        </ul>
+      </nav>
+      <nav class="nav-col">
+        <p class="footer-heading">Empresa</p> 
+        <ul class="footer-navigation">
+          <li><a class="footer-link" href="#">Sobre Historify</a></li>
+          <li><a class="footer-link" href="#">Para negocios</a></li>
+          <li><a class="footer-link" href="#">Partners</a></li>
+          <li><a class="footer-link" href="#">Carreras</a></li>
+
+        </ul>
+      </nav><nav class="nav-col">
+        <p class="footer-heading">Recursos</p> 
+        <ul class="footer-navigation">
+          <li><a class="footer-link" href="#">Bibliografia</a></li>
+          <li><a class="footer-link" href="#">Ayuda</a></li>
+          <li><a class="footer-link" href="#">Privacidad & terminos</a></li>
+         
+
+        </ul>
+      </nav>
+
+     </div>
     </footer>
+    <!--main es para marcar toda la parte principal de la pagina-->
   </body>
 </html>
